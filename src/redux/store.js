@@ -33,4 +33,3 @@ const persistor = persistStore(store);
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export { store, persistor };
-// export default store;
