@@ -11,7 +11,7 @@ import RegisterView from './views/RegisterView';
 import LoginView from './views/LoginView';
 import ContactsView from './views/ContactsView';
 
-import { authOperations } from './redux/authorization/auth-operations';
+import authOperations from './redux/authorization/auth-operations';
 import authSelectors from './redux/authorization/auth-selectors';
 
 import PrivateRoute from './components/PrivateRoute';
