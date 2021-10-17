@@ -1,7 +1,7 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import {
-  // persistStore,
+  persistStore,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-import contactsReducer from './reducers';
+import contactsReducer from './contacts/reducers';
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -29,8 +29,8 @@ const store = configureStore({
   devTools: process.env.NODE_ENV === 'development',
 });
 
-// const persistor = persistStore(store);
+const persistor = persistStore(store);
 
 // eslint-disable-next-line import/no-anonymous-default-export
-// export { store, persistor };
-export default store;
+export { store, persistor };
+// export default store;

@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Spinner from '../Loader/Loader';
-import operations from '../../redux/operations';
-import { getLoadingStatus } from '../../redux/selectors';
+import operations from '../../redux/contacts/operations';
+import { getLoadingStatus } from '../../redux/contacts/selectors';
 import styles from './Form.module.css';
 
 export default function Form() {
