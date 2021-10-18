@@ -1,15 +1,12 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-// import Spinner from '../Loader/Loader';
 import operations from '../../redux/contacts/operations';
-// import { getLoadingStatus } from '../../redux/contacts/selectors';
 import styles from './Form.module.css';
 
 export default function Form() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // const loading = useSelector(getLoadingStatus);
 
   const dispatch = useDispatch();
 
@@ -40,10 +37,6 @@ export default function Form() {
     setName('');
     setNumber('');
   };
-
-  // if (loading) {
-  //   return <Spinner />;
-  // }
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>

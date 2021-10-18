@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-// import Spinner from '../Loader/Loader';
 import operations from '../../redux/contacts/operations';
-import {
-  getFilteredContacts,
-  // getLoadingStatus,
-} from '../../redux/contacts/selectors';
+import { getFilteredContacts } from '../../redux/contacts/selectors';
 import styles from './Contacts.module.css';
 
 export default function Contacts() {
@@ -20,9 +16,6 @@ export default function Contacts() {
   };
 
   if (contacts) {
-    // if (loading) {
-    //   return <Spinner />;
-    // }
     return (
       <ul className={styles.contacts}>
         {contacts.map(contact => (

@@ -11,7 +11,7 @@ export default function Spinner() {
         color="#00BFFF"
         height={80}
         width={80}
-        // timeout={3000}
+        timeout={3000}
       />
     </div>
   );

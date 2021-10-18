@@ -11,9 +11,9 @@ export default function UserMenu() {
 
   return (
     <div className={styles.box}>
-      <span className={styles.text}>{`Hello, ${name}`}</span>
+      <span className={styles.username}>{`Hello, ${name}`}</span>
       <button
-        className={styles.button}
+        className={styles.formBtn}
         type="button"
         onClick={() => dispatch(authOperations.logOut())}
       >
