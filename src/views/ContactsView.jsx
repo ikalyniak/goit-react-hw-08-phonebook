@@ -7,6 +7,7 @@ import Container from '../components/Container/Container';
 import Form from '../components/Form/Form';
 import Filter from '../components/Filter/Filter';
 import Contacts from '../components/Contacts/Contacts';
+import styles from './styles.module.css';
 
 export default function ContactsView() {
   const dispatch = useDispatch();
@@ -18,9 +19,9 @@ export default function ContactsView() {
   return (
     <div className="">
       <Container>
-        <h1>Phonebook</h1>
+        <h1 className={styles.text}>PHONEBOOK</h1>
         <Form />
-        <h2>Contacts</h2>
+        <h2 className={styles.text}>CONTACTS</h2>
         <Filter />
         <Contacts />
       </Container>

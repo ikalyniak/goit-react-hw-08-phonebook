@@ -26,11 +26,15 @@ export default function Contacts() {
     return (
       <ul className={styles.contacts}>
         {contacts.map(contact => (
-          <li key={contact.id}>
-            <p>
-              {contact.name}:{contact.number}
+          <li className={styles.li} key={contact.id}>
+            <p className={styles.contact}>
+              {contact.name} : {contact.number}
             </p>
-            <button type="button" onClick={() => onDelete(contact.id)}>
+            <button
+              className={styles.formBtn}
+              type="button"
+              onClick={() => onDelete(contact.id)}
+            >
               DELETE
             </button>
           </li>

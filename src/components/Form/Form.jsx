@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import Spinner from '../Loader/Loader';
+// import Spinner from '../Loader/Loader';
 import operations from '../../redux/contacts/operations';
-import { getLoadingStatus } from '../../redux/contacts/selectors';
+// import { getLoadingStatus } from '../../redux/contacts/selectors';
 import styles from './Form.module.css';
 
 export default function Form() {
@@ -47,8 +47,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <label htmlFor="">
-        Name
+      <label className={styles.label} htmlFor="">
         <input
           type="text"
           name="name"
@@ -58,11 +57,11 @@ export default function Form() {
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
           className={styles.input}
+          placeholder="NAME"
         />
       </label>
 
-      <label htmlFor="">
-        Number
+      <label className={styles.label} htmlFor="">
         <input
           type="tel"
           name="number"
@@ -72,9 +71,12 @@ export default function Form() {
           title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
           required
           className={styles.input}
+          placeholder="NUMBER"
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button className={styles.formBtn} type="submit">
+        ADD CONTACT
+      </button>
     </form>
   );
 }

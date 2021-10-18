@@ -11,13 +11,13 @@ export default function Filter() {
   const onChange = event => dispatch(actions.changeFilter(event.target.value));
   return (
     <label>
-      Find contact by name
       <input
         name="filter"
         type="text"
         value={value}
         onChange={onChange}
-        className={styles.filter}
+        className={styles.input}
+        placeholder="FIND CONTACT BY NAME"
       />
     </label>
   );

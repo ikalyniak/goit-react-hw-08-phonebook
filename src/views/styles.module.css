@@ -31,38 +31,6 @@
   color: #2196f3;
 }
 
-/* .container {
-  display: flex;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #2196f3;
-}
-
-.textContainer {
-  padding: 20px;
-  width: 500px;
-  text-align: justify;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  width: 200px;
-
-  margin-bottom: 30px;
-} */
-
-/*  */
-
-/* .SearchForm {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 500px;
-  background-color: #fff;
-  border-radius: 3px;
-  overflow: hidden;
-} */
 
 .input {
   display: inline-block;
