@@ -10,3 +10,8 @@
 .activeLink {
   color: #2196f3;
 }
+
+.link:hover,
+.link:focus {
+  color: #2196f3;
+}

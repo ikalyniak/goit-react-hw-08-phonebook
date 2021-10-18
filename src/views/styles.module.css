@@ -89,4 +89,14 @@
   background-color: #2196f3;
   color: #ffffff;
   font-size: 16px;
+  cursor: pointer;
+}
+
+
+.formBtn:hover,
+.formBtn:focus {
+  color: #2196f3;
+  background-color: #ffffff;
+  border: 1px solid #2196f3;
+
 }
