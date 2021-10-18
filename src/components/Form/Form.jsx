@@ -9,7 +9,7 @@ import styles from './Form.module.css';
 export default function Form() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const loading = useSelector(getLoadingStatus);
+  // const loading = useSelector(getLoadingStatus);
 
   const dispatch = useDispatch();
 
@@ -41,9 +41,9 @@ export default function Form() {
     setNumber('');
   };
 
-  if (loading) {
-    return <Spinner />;
-  }
+  // if (loading) {
+  //   return <Spinner />;
+  // }
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
