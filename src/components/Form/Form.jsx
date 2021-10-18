@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 import operations from '../../redux/contacts/operations';
+import { getContactsItems } from '../../redux/contacts/selectors';
 import styles from './Form.module.css';
 
 export default function Form() {
@@ -9,6 +11,7 @@ export default function Form() {
   const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
+  const items = useSelector(getContactsItems);
 
   const handleChange = event => {
     const { name, value } = event.currentTarget;
@@ -29,7 +32,11 @@ export default function Form() {
 
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(operations.addNewContact({ name, number }));
+    if (items.find(elem => elem.name === name)) {
+      toast.error(`${name} is already in contacts`);
+    } else {
+      dispatch(operations.addNewContact({ name, number }));
+    }
     reset();
   };
 
