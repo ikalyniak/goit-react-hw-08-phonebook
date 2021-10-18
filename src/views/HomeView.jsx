@@ -1,5 +1,7 @@
 import React from 'react';
 
+import logo from './phonebook.png';
+
 const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
@@ -16,7 +18,7 @@ const styles = {
 
 const HomeView = () => (
   <div style={styles.container}>
-    <h1 style={styles.title}>Hello world &colon; &rpar;</h1>
+    <img src={logo} alt="" />
   </div>
 );
 

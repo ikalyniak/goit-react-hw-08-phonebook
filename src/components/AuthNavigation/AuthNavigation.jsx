@@ -11,7 +11,7 @@ export default function AuthNavigation() {
         exact
         to="/register"
       >
-        Registration
+        REGISTRATION
       </NavLink>
       <NavLink
         className={styles.link}

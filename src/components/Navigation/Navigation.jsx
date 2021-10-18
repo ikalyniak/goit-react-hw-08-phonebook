@@ -11,7 +11,7 @@ export default function Navigation() {
         exact
         to="/"
       >
-        Home
+        HOME
       </NavLink>
       <NavLink
         className={styles.link}
@@ -19,7 +19,7 @@ export default function Navigation() {
         exact
         to="/contacts"
       >
-        Phonebook
+        PHONEBOOK
       </NavLink>
     </nav>
   );

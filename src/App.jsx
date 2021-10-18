@@ -7,6 +7,7 @@ import Loader from 'react-loader-spinner';
 
 import AppBar from './components/AppBar/AppBar';
 import Container from './components/Container/Container';
+import HomeView from './views/HomeView';
 import RegisterView from './views/RegisterView';
 import LoginView from './views/LoginView';
 import ContactsView from './views/ContactsView';
@@ -43,6 +44,10 @@ export default function App() {
           }
         >
           <Switch>
+            <PublicRoute exact path="/">
+              <HomeView />
+            </PublicRoute>
+
             <PublicRoute path="/register" restricted redirectTo="/contacts">
               <RegisterView />
             </PublicRoute>

@@ -2,17 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import authOperations from '../redux/authorization/auth-operations';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import styles from './styles.module.css';
 
 export default function RegisterView() {
   const dispatch = useDispatch();
@@ -43,35 +33,45 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1>Registration</h1>
+      <h1 className={styles.text}>REGISTRATION</h1>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
-          Name
-          <input type="text" name="name" value={name} onChange={handleChange} />
+      <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
+        <label className={styles.label}>
+          <input
+            className={styles.input}
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            placeholder="NAME"
+          />
         </label>
 
-        <label style={styles.label}>
-          Mail
+        <label className={styles.label}>
           <input
+            className={styles.input}
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
+            placeholder="EMAIL"
           />
         </label>
 
-        <label style={styles.label}>
-          Password
+        <label className={styles.label}>
           <input
+            className={styles.input}
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
+            placeholder="PASSWORD"
           />
         </label>
 
-        <button type="submit">Register now</button>
+        <button type="submit" className={styles.formBtn}>
+          REGISTER NOW
+        </button>
       </form>
     </div>
   );
